@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/algamoney-front-nx",
+  "sourceRoot": "apps/algamoney-front-nx/src",
+  "prefix": "algamoney-nx",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/algamoney-front-nx",
+        "index": "apps/algamoney-front-nx/src/index.html",
+        "main": "apps/algamoney-front-nx/src/main.ts",
+        "polyfills": "apps/algamoney-front-nx/src/polyfills.ts",
+        "tsConfig": "apps/algamoney-front-nx/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/algamoney-front-nx/src/favicon.ico",
+          "apps/algamoney-front-nx/src/assets"
+        ],
+        "styles": ["apps/algamoney-front-nx/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/algamoney-front-nx/src/environments/environment.ts",
+              "with": "apps/algamoney-front-nx/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "algamoney-front-nx:build:production"
+        },
+        "development": {
+          "browserTarget": "algamoney-front-nx:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "algamoney-front-nx:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/algamoney-front-nx/src/**/*.ts",
+          "apps/algamoney-front-nx/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/algamoney-front-nx"],
+      "options": {
+        "jestConfig": "apps/algamoney-front-nx/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

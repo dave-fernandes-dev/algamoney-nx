@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "algamoney-front-nx": "apps/algamoney-front-nx",
+    "algamoney-front-nx-e2e": "apps/algamoney-front-nx-e2e"
+  }
+}
