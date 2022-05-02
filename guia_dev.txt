@@ -1,0 +1,14 @@
+// cria o projeto
+npx create-nx-workspace --preset=angular
+
+//instala primeng
+npm install primeng@13.3.0 --save
+npm install primeicons --save
+npm install @angular/animations@v13.3.5 --save
+npm install primeflex --save
+
+//font awesome
+npm install font-awesome --save
+
+//rodar usando angular do projeto
+ nx serve -o

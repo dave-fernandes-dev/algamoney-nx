@@ -1,0 +1,41 @@
+$ npx create-nx-workspace --preset=angular
+
+Need to install the following packages:
+  create-nx-workspace
+Ok to proceed? (y) y
+✔ Workspace name (e.g., org name)     · algamoney-nx
+✔ Application name                    · algamoney-front-nx
+✔ Default stylesheet format           · scss
+/home/dave/.npm/_npx/d2207cf76adb22dc/node_modules/create-nx-workspace/bin
+✔ Use Nx Cloud? (It's free and doesn't require registration.) · Yes
+
+ >  NX   Nx is creating your v13.10.3 workspace.
+
+   To make sure the command works reliably in all environments, and that the preset is applied correctly,
+   Nx will run "npm install" several times. Please wait.
+
+✔ Installing dependencies with npm
+✔ Nx has successfully created the workspace.
+✔ NxCloud has been set up successfully
+
+
+ >  NX   First time using Nx? Check out this interactive Nx tutorial.
+
+   https://nx.dev/angular-tutorial/01-create-application
+   
+   Prefer watching videos? Check out this free Nx course on YouTube.
+   https://www.youtube.com/watch?v=2mYLe9Kp9VM&list=PLakNactNC1dH38AfqmwabvOszDmKriGco
+
+
+ >  NX   Nx Cloud has been enabled
+
+   Your workspace is currently public. Anybody with code access can view the workspace on nx.app.
+   You can connect the workspace to your Nx Cloud account at https://nx.app/orgs/workspace-setup?accessToken=ZGU5YTI2MTYtMmE5MC00NTA2LWFjNmQtNDFmMWQ1YTA1YzA3fHJlYWQtd3JpdGU= (You can do this later.)
+   
+//rodar o sistema 
+   npx nx serve algamoney-front-nx
+   
+//criar componente
+   nx g @nrwl/angular:component componente --dry-run
+   
+
